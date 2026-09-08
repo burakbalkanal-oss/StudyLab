@@ -16,16 +16,29 @@
  I added a column to my plan table in study.db where the program stores the original creation date of a task. So, in edit task you won't be able to change its date to an earlier date than the original date.
 
 **Log In Page**
-<img width="1919" height="929" alt="Ekran görüntüsü 2026-09-08 202640" src="https://github.com/user-attachments/assets/501a6bf6-5156-4b84-a443-da5f4a4f71f7" />
+
+<img width="1919" height="929" alt="Ekran görüntüsü 2026-09-08 20264" src="https://github.com/user-attachments/assets/501a6bf6-5156-4b84-a443-da5f4a4f71f7" />
+
 **Register Page**
+
 <img width="1919" height="939" alt="Ekran görüntüsü 2026-09-08 202648" src="https://github.com/user-attachments/assets/307b4068-c8eb-4277-87b9-a984b043c987" />
+
 **Main Page**
+
 <img width="1919" height="940" alt="Ekran görüntüsü 2026-09-08 202518" src="https://github.com/user-attachments/assets/09679371-dc81-436f-80d1-e0f2c425fcfc" />
+
 **My Tasks Page**
+
 <img width="1919" height="935" alt="Ekran görüntüsü 2026-09-08 202536" src="https://github.com/user-attachments/assets/540433bd-fbd8-40f3-96a2-3610e0de3152" />
+
 **Progress Page**
+
 <img width="1919" height="940" alt="Ekran görüntüsü 2026-09-08 202546" src="https://github.com/user-attachments/assets/b8b19d4c-387f-429f-9bf2-a868bd5833be" />
+
 **Subject Progress Page**
+
 <img width="1919" height="938" alt="Ekran görüntüsü 2026-09-08 202555" src="https://github.com/user-attachments/assets/201323e0-86f8-4aa4-b4e9-e62285701690" />
+
 **Change Password Page**
+
 <img width="1919" height="927" alt="Ekran görüntüsü 2026-09-08 202603" src="https://github.com/user-attachments/assets/99304acd-2ae4-4abe-b003-98dea8a1f463" />
