@@ -1,0 +1,55 @@
+nav .navbar-brand {
+    font-size: xx-large;
+}
+
+nav .navbar-brand .white {
+    color: #ffffff;
+}
+
+body {
+    background-color: #171714;
+}
+
+.navbar .navbar-nav > li > a {
+  color: #ffffff;
+}
+
+#tasks {
+    margin-top: 100px;
+    color: #ffffff;
+}
+
+.statistics {
+    font-size: 25px;
+}
+
+.label {
+    color: #ffffff;
+}
+
+.middle {
+    font-size: 20px;
+}
+
+.size {
+    font-size: 20px;
+}
+
+.little {
+    font-size: 20px;
+}
+
+.task-card {
+    width: 75%;
+    max-width: 900px;
+    overflow-wrap: break-word;
+}
+
+.task-text {
+    min-width: 0;
+    overflow-wrap: break-word;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}

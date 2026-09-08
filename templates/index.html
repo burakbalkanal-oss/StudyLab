@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <h1 class="label">Welcome Back, {{ username }}!</h1>
+    <h2 class="label">Here's your study overview</h2>
+    <form action="/new_task" method="GET">
+        <div class="mb-5 mt-5">
+            <button class="btn btn-primary" type="submit">+ New Task</button>
+        </div>
+    </form>
+    <hr class="label" style="border: none; background-color: #ffffff; height: 2px; opacity: 1;">
+    <div class="container mt-5 cards_">
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="card statistics">
+                    <div class="card-body py-5">
+                        <p class="statistics">❗Total Tasks❗</p>
+                        <div class="mb-3">
+                            {{ total }}
+                        </div>
+                        <div class="little">
+                            tasks today
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card statistics">
+                    <div class="card-body py-5">
+                        <p class="statistics">📝Remaining Tasks📝</p>
+                        <div class="mb-3">
+                            {{ remaining }}
+                        </div>
+                        <div class="little">
+                            remaining tasks today
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card statistics">
+                    <div class="card-body py-5">
+                        <p class="statistics">✅Completed Tasks✅</p>
+                        <div class="mb-3">
+                            {{ completed }}
+                        </div>
+                        <div class="little">
+                            completed tasks today
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card statistics">
+                    <div class="card-body py-5">
+                        <p class="statistics">⌛Completion⌛</p>
+                        <div class="mb-3">
+                            {{ percentage }}%
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: {{ percentage }}%;"aria-valuenow="{{ percentage }}" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="label mt-5" style="border: none; background-color: #ffffff; height: 2px; opacity: 1;">
+    <div id="tasks">
+        <h1 class="mb-5">Today's Tasks</h1>
+    </div>
+    <hr class="label" style="border: none; background-color: #ffffff; width: 50%; height: 2px; opacity: 1; margin: 0 auto;">
+    {% for task in tasks %}
+        <div class="card mt-5 mb-5 mx-auto task-card">
+            <div class="card-body">
+                <div class="mb-3 mt-3 task-text d-flex align-items-center">
+                    <form action="/complete" method="POST" class="ms-2"><input name="task_id" value="{{ task['id'] }}" onchange="this.form.submit()" type="checkbox"></form>
+                    <div class="ms-4 task-text">{{ task["subject"] }}: {{ task["task"] }}</div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    {% if total == 0 %}
+        <div class="mt-4">
+            <p class="label">You don't have any tasks for today.</p>
+        </div>
+    {% elif completed == total %}
+        <div class="mt-4">
+            <p class="label">🎉 You're all done for today!</p>
+        </div>
+    {% else %}
+        <div class="mt-4">
+            <p class="label">Good luck with your tasks.</p>
+        </div>
+    {% endif %}
+{% endblock %}

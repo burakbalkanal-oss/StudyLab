@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    New Task
+{% endblock %}
+
+{% block main %}
+
+    <div class="mb-3">
+        <h1 class="label">🍵Add A New Task🛠️</h1>
+    </div>
+    <form action="/new_task" method="POST">
+        <div class="mb-3">
+            <div class="mb-2">
+                <label class="label size" for="sub">Subject you want to study:</label>
+            </div>
+            <input autocomplete="off" autofocus id="sub" class="form-control mx-auto w-auto" name=subject placeholder="Subject" type="text">
+        </div>
+        <div class="mb-3">
+            <div class="mb-2">
+                <label class="label size" for="t">The task you want to do:</label>
+            </div>
+            <input autocomplete="off" id="t" class="form-control mx-auto w-auto" name=task placeholder="Task" type="text">
+        </div>
+        <div class="mb-3">
+            <div class="mb-2">
+                <label class="label size" for="d">The date you want to finish the task:</label>
+            </div>
+            <input autocomplete="off" id="d" class="form-control mx-auto w-auto" name=date type="date" min="{{ current_date }}">
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-primary" type="submit">Add A New Task</button>
+        </div>
+    </form>
+    <div class="mb-3">
+        <a href="/">Cancel</a>
+    </div>
+{% endblock %}

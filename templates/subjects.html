@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Subjects
+{% endblock %}
+
+{% block main %}
+    <h1 class="label">Subjects</h1>
+    <hr class="label mb-5" style="border: none; background-color: #ffffff; width: 20%; height: 2px; opacity: 1; margin: 0 auto;">
+    {% if not tasks %}
+        <h2 class="label">You don't seem to have any tasks</h2>
+    {% else %}
+        {% for task in tasks %}
+            <div class="mb-3 mt-5" style="text-align: left;">
+                <h3 class="label">Progress in {{ task["subject"] }}</h3>
+            </div>
+            <hr class="label" style="border: none; background-color: #ffffff; width: 100%; height: 2px; opacity: 1; margin: 0 auto;">
+            <p class="label size mt-3">{{ task["completed"] }} / {{ task["total"] }} completed</p>
+            {% set percent = ((task["completed"] / task["total"]) * 100) | int %}
+            <div class="progress mx-auto" style="width: 50%;">
+                <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: {{ percent }}%;"aria-valuenow="{{ percent }}" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endblock %}

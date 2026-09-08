@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Change Password
+{% endblock %}
+
+{% block main %}
+    <h1 class="label mb-3">Change Password</h1>
+    <hr class="label mb-5" style="border: none; background-color: #ffffff; width: 35%; height: 2px; opacity: 1; margin: 0 auto;">
+    <form action="/change" method="POST">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto mb-4" name="current_password" placeholder="Current Password" type="password">
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" class="form-control mx-auto w-auto mb-4" name="new_password" placeholder="New Password" type="password">
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" class="form-control mx-auto w-auto mb-4" name="new_confirmation" placeholder="Confirm Your New Password" type="password">
+        </div>
+        <button class="btn btn-primary" type="submit">Change</button>
+    </form>
+{% endblock %}

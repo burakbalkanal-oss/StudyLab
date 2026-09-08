@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    My Tasks
+{% endblock %}
+
+{% block main %}
+    <div class="mb-3">
+        <h1 class="label">⚙️Edit Task⚙️</h1>
+    </div>
+    <form action="/edit_task" method="POST">
+        <input type="hidden" name="task_id" value="{{ task['id'] }}">
+        <div class="mb-3">
+            <div class="mb-2">
+                <label class="label size" for="esub">Edit the subject you want to study:</label>
+            </div>
+            <input autocomplete="off" value="{{ task['subject'] }}" autofocus id="esub" class="form-control mx-auto w-auto" name=subject type="text">
+        </div>
+        <div class="mb-3">
+            <div class="mb-2">
+                <label class="label size" for="et">Edit the task you want to do:</label>
+            </div>
+            <input autocomplete="off" id="et" value="{{ task['task'] }}" class="form-control mx-auto w-auto" name=task placeholder="Task" type="text">
+        </div>
+        <div class="mb-3">
+            <div class="mb-2">
+                <label class="label size" for="ed">The date you want to finish the task:</label>
+            </div>
+            <input autocomplete="off" id="ed" value="{{ task['due_to'] }}" class="form-control mx-auto w-auto" name=date type="date" min="{{ task['original_due_to'] }}">
+        </div>
+        <div class="mb-3">
+            <div class="mb-2">
+                <label class="label size" for="comp">Edit the completion of the task:</label>
+            </div>
+            <select id="comp" name="comp">
+                {% if task['is_completed'] == 1 %}
+                    <option selected value="{{ task['is_completed'] }}">Completed</option>
+                    <option value=0>Incomplete</option>
+                {% else %}
+                    <option selected value="{{ task['is_completed'] }}">Incomplete</option>
+                    <option value=1>Completed</option>
+                {% endif %}
+            </select>
+        </div>
+        <div class="mb-3">
+            <button class="btn btn-primary" type="submit">Edit Task</button>
+        </div>
+    </form>
+    <div class="mb-3">
+        <a href="/my_tasks">Cancel</a>
+    </div>
+{% endblock %}
+
