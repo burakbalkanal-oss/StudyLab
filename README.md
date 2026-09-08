@@ -2,17 +2,29 @@
 #### Video Demo: https://www.youtube.com/watch?v=SrVwmZJ4vPM
 #### Description:
  When I was thinking about a final project idea I saw my cousin trying to create a study plan. So, I thought that it would be useful to build a website that helps students create a study plan. That is when I had an idea. I was going to create a website where students could create their own study plans. In order to implement this idea I created a website called StudyLab. It offers useful features for students to use.
+ 
  Before I introduce the features, I would like to talk about the technologies that I used in my project. First of all, I used HTML to build the structure of the website. After that, I used CSS to make my website look better. To make a secure website and to render the pages of my website I used Flask and Python. I used Bootstrap to build a clean and modern user interface. I also used SQLite to store and get the data that users enter. These technologies really helped me a lot. Let us now dive into the features that my website offers.
+ 
  The first feature is registration. In order to use my website, you must first register if you do not already have an account. To register you must be on the register page. You have to see three input boxes. You have to type in your username and your password. There is also a confirmation box to confirm your password. You have to fill in all the blanks to register. After filling in all the blanks and confirming your password you must successfully be registered. You cannot choose a username that is already in use.
+ 
  After registering, you must also log in. You have to fill in all the blanks in the login page. You must type in your account's username and password. If they are correct you must be logged in. You can now use the other features of my website.
+ 
  The first thing that you will see is the main page of my website after logging in. The website will greet you at the top of the page. Underneath it, you will see a button which is named "+ New Task". Below you will see your statistics of your today's progress. There will be today's total tasks, completed tasks, remaining tasks and a progress bar. Beneath the page there will be the tasks that you created for today. You can mark the checkbox that is next to the task to mark it as completed. If all the tasks are completed for today you will see a congratulations text below.
+ 
  If you click the "+ New Task" button you will be redirected to a new page where you can create a new task. You must enter the subject, the task itself and the date that you want to do that task. After pressing the button below you must successfully create a new task.
+ 
  The next feature is one of the most useful features that my website offers. Your tasks will be grouped by their dates and you can now edit your task's subject or the task itself or the date. You can also edit its completion. There will also be a delete button. With that you can delete your task. If you accidentally press it do not worry a confirmation will pop up.
+ 
  In the progress page you will see a progress bar that shows the total completion of all of your tasks. Beneath it you will see some progress bars grouped by their dates. In the progress bars you will see the completion progress of the tasks that are due on that date. You will also see a button below those progress bars. If you press that button you will see the progress bars grouped by their subjects.
+ 
  You can also change your password if you would like to. Just go to the change password page and you will see three input boxes. First, you have to type in your current password for security. Then, your new password and its confirmation. All the blanks must be filled in and your current password must be correct. By pressing the change button you can change your password successfully.
+ 
  Lastly, if you want to log out you can log out just by pressing the log out on the navigation bar.
+ 
  You also cannot access another user's tasks or data. I wrote my SQL queries in a way that protects users' data. For instance, you cannot edit or delete someone else's tasks.
+ 
  Let me explain the purpose of every file. app.py handles rendering, getting data, and checking jobs. layout.html contains the code for displaying flash() messages and the navigation bar, and I use it as a layout. study.db is the database that I store the data in. index.html is the main menu's code. I get the values from app.py and display them with index.html. new_task.html is the code of the part where you create a new task. my_tasks.html is the code of the part where you can see, edit and delete your tasks. With edit_task.html you are now able to edit your tasks. progress.html and subjects.html display your tasks and you can see your progress. change.html includes the form code where you change your password. register.html and login.html are the code of the part where you register and log in. styles.css makes my website look better. For instance, I adjusted the font size of a text.
+ 
  I added a column to my plan table in study.db where the program stores the original creation date of a task. So, in edit task you won't be able to change its date to an earlier date than the original date.
 
 ### Log In Page
