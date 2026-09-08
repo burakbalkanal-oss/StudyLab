@@ -15,17 +15,17 @@
  Let me explain the purpose of every file. app.py handles rendering, getting data, and checking jobs. layout.html contains the code for displaying flash() messages and the navigation bar, and I use it as a layout. study.db is the database that I store the data in. index.html is the main menu's code. I get the values from app.py and display them with index.html. new_task.html is the code of the part where you create a new task. my_tasks.html is the code of the part where you can see, edit and delete your tasks. With edit_task.html you are now able to edit your tasks. progress.html and subjects.html display your tasks and you can see your progress. change.html includes the form code where you change your password. register.html and login.html are the code of the part where you register and log in. styles.css makes my website look better. For instance, I adjusted the font size of a text.
  I added a column to my plan table in study.db where the program stores the original creation date of a task. So, in edit task you won't be able to change its date to an earlier date than the original date.
 
-## Log In Page
+**Log In Page**
 <img width="1919" height="929" alt="Ekran görüntüsü 2026-09-08 202640" src="https://github.com/user-attachments/assets/501a6bf6-5156-4b84-a443-da5f4a4f71f7" />
-## Register Page
+**Register Page**
 <img width="1919" height="939" alt="Ekran görüntüsü 2026-09-08 202648" src="https://github.com/user-attachments/assets/307b4068-c8eb-4277-87b9-a984b043c987" />
-## Main Page Page
+**Main Page**
 <img width="1919" height="940" alt="Ekran görüntüsü 2026-09-08 202518" src="https://github.com/user-attachments/assets/09679371-dc81-436f-80d1-e0f2c425fcfc" />
-## My Tasks Page
+**My Tasks Page**
 <img width="1919" height="935" alt="Ekran görüntüsü 2026-09-08 202536" src="https://github.com/user-attachments/assets/540433bd-fbd8-40f3-96a2-3610e0de3152" />
-## Progress Page
+**Progress Page**
 <img width="1919" height="940" alt="Ekran görüntüsü 2026-09-08 202546" src="https://github.com/user-attachments/assets/b8b19d4c-387f-429f-9bf2-a868bd5833be" />
-## Subject Progress Page
+**Subject Progress Page**
 <img width="1919" height="938" alt="Ekran görüntüsü 2026-09-08 202555" src="https://github.com/user-attachments/assets/201323e0-86f8-4aa4-b4e9-e62285701690" />
-## Change Password Page
+**Change Password Page**
 <img width="1919" height="927" alt="Ekran görüntüsü 2026-09-08 202603" src="https://github.com/user-attachments/assets/99304acd-2ae4-4abe-b003-98dea8a1f463" />
